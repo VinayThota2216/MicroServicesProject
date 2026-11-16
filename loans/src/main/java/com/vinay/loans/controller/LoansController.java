@@ -46,7 +46,7 @@ public class LoansController {
             responseCode = "201",
             description = "Loan Created"
     )
-    @PostMapping("/create/{mobile_number}")
+    @PostMapping("/createLoan/{mobile_number}")
     public ResponseEntity<ResponseDto> createAccount(@PathVariable("mobile_number")
                                                          @Pattern(regexp = "^[6-9][0-9]{9}$" , message = "Invalid Mobile Number")
                                                          String  mobileNumber) {
@@ -80,7 +80,7 @@ public class LoansController {
             )
     }
     )
-    @PutMapping("/update")
+    @PutMapping("/updateLoan")
     public ResponseEntity updateAccount(@Valid @RequestBody LoansDto loansDto) {
         boolean isUpdated=iLoansService.updateLoan(loansDto);
 
@@ -118,7 +118,7 @@ public class LoansController {
             )
     }
     )
-    @DeleteMapping("/delete/{mobile_number}")
+    @DeleteMapping("/deleteLoan/{mobile_number}")
     public ResponseEntity deleteAccount(@PathVariable("mobile_number")
                                         @Pattern(regexp = "^[6-9][0-9]{9}$" , message = "Invalid Mobile Number")
                                         String mobileNumber) {
@@ -146,7 +146,7 @@ public class LoansController {
             responseCode = "200",
             description = "Loan details Fetched Successfully"
     )
-    @GetMapping("/get/{mobile_number}")
+    @GetMapping("/getLoan/{mobile_number}")
     public ResponseEntity getAccount(@Pattern(regexp = "^[6-9][0-9]{9}$" , message = "Invalid Mobile Number")
                                      @PathVariable("mobile_number") String mobileNumber) {
 

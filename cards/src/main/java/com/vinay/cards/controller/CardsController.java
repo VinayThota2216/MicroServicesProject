@@ -44,7 +44,7 @@ public class CardsController {
             responseCode = "201",
             description = "Card Created"
     )
-    @PostMapping("/create/{mobile_number}")
+    @PostMapping("/createCard/{mobile_number}")
     public ResponseEntity<ResponseDto> createCard(@PathVariable("mobile_number")
                                                       @Pattern(regexp = "^[6-9][0-9]{9}$" , message = "Invalid Mobile Number")
                                                       String  mobileNumber){

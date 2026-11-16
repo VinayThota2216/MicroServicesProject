@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class LoansDto {
 
     private Long loanId;
@@ -31,7 +32,7 @@ public class LoansDto {
             example = "123456789123"
 
     )
-    @Pattern(regexp = "^[0-9]{12}$", message = "Invalid Card Number")
+    @Pattern(regexp = "^[0-9]{12}$", message = "Invalid loan Number")
     private String loanNumber;
 
     @Schema(

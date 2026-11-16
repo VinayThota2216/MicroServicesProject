@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.*;
         description = "CRUD Operations for The Accounts Section"
 )
 @RestController
-@RequestMapping(path = "/v1/accounts/api",produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/v1/api/accounts",produces = MediaType.APPLICATION_JSON_VALUE)
 @Validated
 public class AccountsController {
 
